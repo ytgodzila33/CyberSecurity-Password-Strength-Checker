@@ -1,184 +1,118 @@
-# 🔐 CyberShield - Advanced Password Strength Analyzer
+# 🔐 CyberShield – Password Strength Analyzer
 
-> A professional Python-based Password Strength Analyzer that evaluates password security using modern cybersecurity principles such as entropy analysis, breach detection, keyboard pattern recognition, dictionary attacks, and secure password generation.
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Completed-success.svg)
-![Project](https://img.shields.io/badge/DecodeLabs-Cybersecurity%20Internship-red.svg)
+> A Python-based Password Strength Analyzer designed to evaluate password security by analyzing complexity, entropy, dictionary words, and password composition. Developed as part of my **Week 1 Cybersecurity Internship Project at DecodeLabs**.
 
 ---
 
-# 📌 Overview
+## 📖 Overview
 
-CyberShield is an advanced password security analyzer developed as part of my **Cybersecurity Internship at DecodeLabs**.
+CyberShield is a command-line password analysis tool that helps users evaluate the strength of their passwords using multiple security checks. Instead of only verifying password length, the application analyzes password complexity and estimates its resistance against brute-force attacks.
 
-Unlike traditional password checkers that only verify length and character types, CyberShield performs multiple security analyses to estimate password strength and identify common weaknesses.
-
-The project demonstrates practical cybersecurity concepts including entropy calculation, password complexity analysis, keyboard pattern detection, dictionary attacks, common password detection, and secure password generation.
+The project was developed to gain practical experience in secure authentication principles and defensive cybersecurity concepts.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-### 🔐 Password Strength Analysis
+### 🔍 Password Strength Analysis
 
-* Password Length Validation
-* Uppercase Letter Detection
-* Lowercase Letter Detection
-* Numeric Character Detection
-* Special Character Detection
+* Analyze password length
+* Detect uppercase letters
+* Detect lowercase letters
+* Detect numeric characters
+* Detect special characters
+* Classify password strength
 
----
+### 📊 Entropy Calculation
 
-### 📊 Entropy Analysis
+* Calculate password entropy
+* Estimate password search space
+* Evaluate password complexity
 
-* Password Entropy Calculation
-* Character Set Analysis
-* Password Search Space Estimation
-* Online Attack Time Estimation
-* Offline Attack Time Estimation
-* Entropy Rating
+### 📚 Dictionary Detection
 
----
-
-### 🚨 Breach Detection
-
-* Common Password Detection
-* Leaked Password Database Detection
-* Dictionary Word Detection
-* Personal Information Detection
-* Birth Year Detection
-* Phone Number Detection
-
----
-
-### 🧠 Smart Detection
-
-* Leetspeak Detection
-* Keyboard Pattern Detection
-* Sequential Character Detection
-* Reverse Sequence Detection
-* Repeated Character Detection
-* Repeated Pattern Detection
-
----
-
-### 📈 Password Scoring
-
-CyberShield evaluates passwords using a weighted scoring system based on:
-
-* Length
-* Character Variety
-* Entropy
-* Dictionary Checks
-* Keyboard Pattern Checks
-* Breach Detection
-* Password Complexity
-
-Final ratings include:
-
-* 🔴 Very Weak
-* 🟠 Weak
-* 🟡 Medium
-* 🟢 Strong
-* 🟢 Very Strong
-
----
+* Detect common dictionary words
+* Identify weak passwords based on known word lists
 
 ### 🔑 Password Generator
 
-Generate highly secure passwords using:
+Generate secure random passwords with customizable complexity.
 
-* Uppercase Letters
-* Lowercase Letters
-* Numbers
-* Symbols
-* Custom Length
+### 📄 Report Generation
 
----
+Generate a detailed password analysis report and save it to:
 
-### 📄 Reports
-
-CyberShield automatically generates reports including:
-
-* Text Report
-* JSON Report
+* `password_report.txt`
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 CyberShield/
 │
-├── assets/
-│   ├── logo.txt
-│   └── banner.txt
-│
-├── database/
-│   ├── common_passwords.txt
-│   ├── leaked_passwords.txt
-│   ├── dictionary.txt
-│   └── keyboard_patterns.txt
-│
-├── reports/
-│   ├── password_report.txt
-│   └── report.json
-│
-├── analyzer.py
-├── breach_checker.py
-├── config.py
-├── entropy.py
-├── generator.py
-├── keyboard_detector.py
-├── leetspeak.py
-├── report.py
-├── ui.py
-├── utils.py
-├── main.py
-│
-├── requirements.txt
+├── main.py                    # Application entry point
+├── analyzer.py                # Password analysis engine
+├── entropy.py                 # Entropy calculations
+├── generator.py               # Secure password generator
+├── report.py                  # Report generation
+├── utils.py                   # Helper functions
+├── common_passwords.txt        # Common password database
+├── dictionary.txt             # Dictionary words database
+├── password_report.txt        # Generated analysis report
 └── README.md
 ```
 
 ---
 
-# 🛠 Technologies Used
+## ⚙️ Technologies Used
 
 * Python 3
 * Object-Oriented Programming (OOP)
-* Regular Expressions (Regex)
-* JSON
 * File Handling
-* Math Module
-* Random Module
-* Colorama
+* JSON
+* String Processing
+* Mathematical Calculations
+* Password Entropy Analysis
 * Cybersecurity Fundamentals
 
 ---
 
-# 🚀 Installation
+## 🚀 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/CyberShield.git
+git clone https://github.com/ytgodzila33/CyberSecurity-Password-Strength-Checker.git
 ```
 
-Navigate into the project:
+Navigate to the project directory:
 
 ```bash
-cd CyberShield
+cd CyberSecurity-Password-Strength-Checker
 ```
 
-Install dependencies:
+(Optional) Create a virtual environment:
 
 ```bash
-pip install -r requirements.txt
+python -m venv venv
 ```
 
-Run the project:
+Activate the virtual environment:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+Run the application:
 
 ```bash
 python main.py
@@ -186,75 +120,73 @@ python main.py
 
 ---
 
-# 📸 Sample Features
+## 📋 How It Works
 
-✔ Password Strength Meter
+The application evaluates a password using several criteria:
 
-✔ Entropy Calculation
+* Password length
+* Character diversity
+* Uppercase letters
+* Lowercase letters
+* Numbers
+* Special characters
+* Dictionary word detection
+* Entropy calculation
 
-✔ Breach Detection
-
-✔ Keyboard Pattern Detection
-
-✔ Dictionary Attack Detection
-
-✔ Leetspeak Detection
-
-✔ Secure Password Generator
-
-✔ Security Recommendations
+After evaluation, CyberShield assigns a strength rating and generates a detailed report.
 
 ---
 
-# 🎯 Learning Objectives
+## 🎯 Learning Outcomes
 
-This project was developed to strengthen practical understanding of:
+Through this project, I gained practical experience with:
 
-* Password Security
-* Authentication Principles
-* Secure Coding Practices
-* Cybersecurity Fundamentals
+* Password Security Principles
+* Secure Authentication Concepts
+* Password Entropy
+* Defensive Cybersecurity
 * Python Programming
-* Modular Software Design
-* Defensive Security Concepts
+* Modular Software Development
+* File Handling
+* Algorithm Design
 
 ---
 
-# 📚 Future Improvements
+## 📌 Future Improvements
 
-* GUI Version (Tkinter / PyQt)
-* Password Hashing Support
-* Have I Been Pwned API Integration
-* Password History Management
-* Multi-language Support
-* Export to PDF Reports
-* Dark Mode Interface
-* Multi-threaded Password Analysis
+Planned enhancements include:
+
+* Interactive terminal interface
+* Password breach detection
+* Keyboard pattern detection
+* Leetspeak detection
+* Password history
+* JSON report export
+* PDF report generation
+* Graphical User Interface (GUI)
+* API integration for leaked password databases
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Abdul Rehman Tahir**
 
-BS Computer Science Student
-
-Cybersecurity Enthusiast
-
-Digital Marketing & Graphic Design Background
-
-Currently exploring Python, Ethical Hacking, and Defensive Security.
+* BS Computer Science Student
+* Cybersecurity Enthusiast
+* Python Developer
+* Cybersecurity Intern at DecodeLabs
 
 ---
 
-# 📄 License
+## 📜 License
 
-This project is intended for educational purposes as part of my cybersecurity learning journey and internship. Feel free to fork, explore, and learn from it.
+This project was created for educational and learning purposes as part of my cybersecurity internship. You are welcome to explore, learn from, and modify the code for educational use.
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful or interesting, consider giving it a **Star ⭐** on GitHub.
+If you found this project helpful, please consider giving the repository a **Star ⭐**.
 
-Your support motivates me to build more cybersecurity and Python projects.
+Your support motivates me to continue building and sharing cybersecurity projects.
